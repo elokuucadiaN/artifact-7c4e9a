@@ -1,0 +1,1762 @@
+{
+  "base": {
+    "positive_logs": 18,
+    "negative_controls": 204,
+    "controls": [
+      {
+        "os": "freertos",
+        "control": "changed_source_revision",
+        "rejected": true
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 1,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "fc09023a3e8da4cfd03d9fcaefdb658bbe80ae8b9a63c0e1a62845fd04a646f3"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 2,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "9bff08663fa9506ff862865afd35f6579bcdc9dd8ab2550d1f6e9dd6f2c810d7"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "run": 3,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "c598ed12dcb11228dc40c571445bb2b8a61972d216f3deb74936afa14fbb77ee"
+      },
+      {
+        "os": "freertos",
+        "control": "altered_source_line_count",
+        "rejected": true
+      },
+      {
+        "os": "zephyr",
+        "control": "changed_source_revision",
+        "rejected": true
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 1,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "bcc87e5025ffd2dacd9549025db651518920a766aac1faba1dd99eeda98af7d9"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 2,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "b3ddb1921decd459348f457e89342bf1f1781c634d63ef5f3c7b20a112240c0d"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "run": 3,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "7a937d779ebfa09ee235138c5ded89e7ad9f15cf4a647cc9f8b57429590addae"
+      },
+      {
+        "os": "zephyr",
+        "control": "altered_source_line_count",
+        "rejected": true
+      },
+      {
+        "os": "riot",
+        "control": "changed_source_revision",
+        "rejected": true
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 1,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "c7675d790ddbf5ba25d5e5bdb2596417bf5c3584d922da66927ae25b82a083a5"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 2,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "877807d7129909946bf3a04fbf5cfbcbada152c6047f9c8dece2d973d5d6d4c2"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "run": 3,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "7d2fe8ab33b9f95e8f62e4e9677056a0928e72b2e9b0cecd007ccbb358cdef83"
+      },
+      {
+        "os": "riot",
+        "control": "altered_source_line_count",
+        "rejected": true
+      },
+      {
+        "os": "contiki",
+        "control": "changed_source_revision",
+        "rejected": true
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 1,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "8c0565d2c211d32790553e43ac1a0cc72cc8771498fc9f5383dc5779ff6ef11c"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 2,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "9c051dc8f5ccb9663c3501b3e7a39ea58f93b6b4abfd091eb24a69adf8cc4c67"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "run": 3,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "cafb841a253aefb3f77b3a33655500a4f7b4469b20c2a474276f74b3db9a54ac"
+      },
+      {
+        "os": "contiki",
+        "control": "altered_source_line_count",
+        "rejected": true
+      },
+      {
+        "os": "alios",
+        "control": "changed_source_revision",
+        "rejected": true
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 1,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "21eacbcc47e6d1548c9dbf9332ff808069da96d7c6447d47a4e1747d386478ae"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 2,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "d4bc020c48570c43c539dca9183cc9f32f9d32e70c8b659b469db8188ce06aab"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "run": 3,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "b23691efabcd49ca1130d2c3fba55ad4f37c3600ca21d37944be9e50819dbf21"
+      },
+      {
+        "os": "alios",
+        "control": "altered_source_line_count",
+        "rejected": true
+      },
+      {
+        "os": "nuttx",
+        "control": "changed_source_revision",
+        "rejected": true
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 1,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "8d52b6a4116693ae2ed7bbf04a15e9de8dd12660e1a5afc2eedf5994163c171c"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 2,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "8100753cd4a49433dcc9fa16ac23acc48b6deabf60709a991b084ad6a0e2c1d6"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "missing_completion",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "lost_callback",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "wrong_os_version",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "missing_boot_hook",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "unexecuted_boot_hook",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "wrong_deadline_clock",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "missing_callback_window",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "negative_callback_window",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "missing_extended_identity",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "lost_preemption",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "run": 3,
+        "control": "lost_pingpong",
+        "rejected": true,
+        "original_sha256": "ad0dbf1154de607051a253393db45f6458b7ff179f8790d5e9abf1eb19b83797"
+      },
+      {
+        "os": "nuttx",
+        "control": "altered_source_line_count",
+        "rejected": true
+      }
+    ],
+    "new_OS_runs": 0,
+    "pass": true
+  },
+  "matrix_negative_controls": 54,
+  "matrix_controls": [
+    {
+      "configuration": "baseline-fixed",
+      "process": 1,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 1,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 1,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 2,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 2,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 2,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 3,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 3,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-fixed",
+      "process": 3,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 1,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 1,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 1,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 2,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 2,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 2,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 3,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 3,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "baseline-tickless",
+      "process": 3,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 1,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 1,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 1,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 2,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 2,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 2,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 3,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 3,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-fixed",
+      "process": 3,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 1,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 1,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 1,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 2,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 2,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 2,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 3,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 3,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "qwen_policy-tickless",
+      "process": 3,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 1,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 1,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 1,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 2,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 2,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 2,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 3,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 3,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-fixed",
+      "process": 3,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 1,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 1,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 1,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 2,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 2,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 2,
+      "control": "irq_error",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 3,
+      "control": "missing_announce",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 3,
+      "control": "lost_irq",
+      "rejected": true
+    },
+    {
+      "configuration": "autoos_policy-tickless",
+      "process": 3,
+      "control": "irq_error",
+      "rejected": true
+    }
+  ],
+  "paired_config_checks": [
+    {
+      "policy": "baseline",
+      "only_changed_resolved_setting": [
+        "CONFIG_TICKLESS_KERNEL"
+      ]
+    },
+    {
+      "policy": "qwen_policy",
+      "only_changed_resolved_setting": [
+        "CONFIG_TICKLESS_KERNEL"
+      ]
+    },
+    {
+      "policy": "autoos_policy",
+      "only_changed_resolved_setting": [
+        "CONFIG_TICKLESS_KERNEL"
+      ]
+    }
+  ],
+  "pass_": true
+}

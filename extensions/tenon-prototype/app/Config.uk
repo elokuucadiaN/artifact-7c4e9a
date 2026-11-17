@@ -1,0 +1,7 @@
+config EUNO_PROTOTYPE
+	bool "EunoBench Tenon prototype extension"
+	default y
+
+config TIME_USE_64BIT
+	bool "Use 64-bit generic timer counts"
+	default y

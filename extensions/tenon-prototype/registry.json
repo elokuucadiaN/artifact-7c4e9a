@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "extension": "tenon-prototype-v1",
+  "reference": "TenonOS arXiv:2512.00400v2 section 5",
+  "target": "Tenon native ARM64 on QEMU virt TCG, single vCPU, 128 MiB",
+  "counter": "CNTVCT_EL0 with runtime CNTFRQ_EL0",
+  "modes": ["fixed", "tickless"],
+  "worker_counts": [2, 10, 20, 50, 100],
+  "ectx": [false, true],
+  "timer_counts": [1, 10, 20, 50, 100],
+  "timer_kind": "native one-shot, 20 native ticks",
+  "metrics": [
+    {"id": "worker-handoff-scaling", "evidence": "switches.csv", "reference": "Table 4 inspired"},
+    {"id": "legacy-six-generic-counter", "evidence": "legacy-six.csv", "reference": "Sections 5.2/5.3 derived bodies"},
+    {"id": "timer-arm-scaling", "evidence": "timers.csv", "reference": "Figure 9 inspired new protocol"},
+    {"id": "timer-handler-scaling", "evidence": "timers.csv", "reference": "Figure 9 inspired new protocol"},
+    {"id": "timer-callback-lateness", "evidence": "timers.csv", "reference": "auxiliary correctness"},
+    {"id": "kernel-entry-to-main", "evidence": "boot.csv", "reference": "Table 3 partial boundary"},
+    {"id": "elf-allocated-sections", "evidence": "{mode}/build/sections.json", "reference": "Table 1 inspired"},
+    {"id": "source-code-lines", "evidence": "source-lines.json", "reference": "Table 1/2, explicitly different source scope"}
+  ],
+  "execution_scope": "simulation_functional_validation",
+  "ranking_eligible": false,
+  "historical_coverage_modified": false,
+  "hardware_measurements": 0,
+  "unmeasured": ["physical-reset-boot", "hardware-performance", "energy", "Mortise-Linux-colocation", "full-ISR-context-phases", "new-FreeRTOS-Zephyr-ports"]
+}

@@ -1,0 +1,6 @@
+#ifndef PROJECT_CONF_H_
+#define PROJECT_CONF_H_
+#define SELECT_CONF_STDIN 0
+#define SELECT_CONF_TIMEOUT 1
+#define LOG_CONF_LEVEL_MAIN 0
+#endif

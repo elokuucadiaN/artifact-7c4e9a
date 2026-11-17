@@ -1,0 +1,3 @@
+# Third-party notices
+
+The evidence archive contains declared source excerpts and linked diagnostic images from the paper-pinned OS revisions. Original file copyright/license notices are preserved. The archive licenses/ directory provides FreeRTOS, Zephyr, RIOT, Contiki-NG, AliOS and NuttX licenses and the NuttX NOTICE. See benchmark/version_policy.py and native/SOURCE_SETUP.md for exact revisions and upstream sources. ARM firmware uses the CMSIS revision in Zephyr 3.7.0 west.yml. Existing upstream artifact materials retain their original notices; this supplement makes no new license claim over them.

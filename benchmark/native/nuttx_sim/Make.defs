@@ -1,0 +1,3 @@
+ifneq ($(CONFIG_EXAMPLES_EUNO),)
+CONFIGURED_APPS += $(APPDIR)/examples/euno
+endif

@@ -1,0 +1,23 @@
+test_nan_rejected (benchmark.test_metrics.MetricControls.test_nan_rejected) ... ok
+test_no_duplicate_samples (benchmark.test_metrics.MetricControls.test_no_duplicate_samples) ... ok
+test_no_new_metric_in_original_overall (benchmark.test_metrics.MetricControls.test_no_new_metric_in_original_overall) ... ok
+test_no_pooling_changed_images (benchmark.test_metrics.MetricControls.test_no_pooling_changed_images) ... ok
+test_no_simulation_promotion (benchmark.test_metrics.MetricControls.test_no_simulation_promotion) ... ok
+test_no_unit_relabelling (benchmark.test_metrics.MetricControls.test_no_unit_relabelling) ... ok
+test_parameter_required (benchmark.test_metrics.MetricControls.test_parameter_required) ... ok
+test_static_descriptor_not_guest (benchmark.test_metrics.MetricControls.test_static_descriptor_not_guest) ... ok
+test_unbound_evidence_rejected (benchmark.test_metrics.MetricControls.test_unbound_evidence_rejected) ... ok
+test_no_public_snapshot_project_claims (benchmark.test_subjects.OriginalSubjects.test_no_public_snapshot_project_claims) ... ok
+test_original_eight_not_reference_tenon (benchmark.test_subjects.OriginalSubjects.test_original_eight_not_reference_tenon) ... ok
+test_planned_cells_are_not_test_passes (benchmark.test_subjects.OriginalSubjects.test_planned_cells_are_not_test_passes) ... ok
+test_missing_revision_rejected (benchmark.test_versions.PaperVersionAdmission.test_missing_revision_rejected) ... ok
+test_other_release_rejected (benchmark.test_versions.PaperVersionAdmission.test_other_release_rejected) ... ok
+test_bom_and_continued_line_comment (benchmark.test_source_scope.SourceScopeCounter.test_bom_and_continued_line_comment) ... ok
+test_comment_delimiters_in_character_literals (benchmark.test_source_scope.SourceScopeCounter.test_comment_delimiters_in_character_literals) ... ok
+test_comments_and_literals (benchmark.test_source_scope.SourceScopeCounter.test_comments_and_literals) ... ok
+test_final_line_and_blank_lines (benchmark.test_source_scope.SourceScopeCounter.test_final_line_and_blank_lines) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.005s
+
+OK

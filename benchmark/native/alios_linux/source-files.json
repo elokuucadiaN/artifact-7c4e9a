@@ -1,0 +1,450 @@
+{
+  "commit": "bacc144bdc5df8fe8e302e3732675a920aa40bc5",
+  "files": [
+    {
+      "path": "kernel/rhino/.gitignore",
+      "sha": "89f9ac04aac6c8ee66e158853e7d0439b3ec782d",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/.gitignore"
+    },
+    {
+      "path": "kernel/rhino/Config.in",
+      "sha": "ce58b72bbb9a53044339eb63707828812b7d28b9",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/Config.in"
+    },
+    {
+      "path": "kernel/rhino/OWNER",
+      "sha": "30fc9cc9625fe99bfce6d43f1905e9b5606733a7",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/OWNER"
+    },
+    {
+      "path": "kernel/rhino/README.md",
+      "sha": "0ce3089e3d202a3831ce226eababd5231525cd20",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/README.md"
+    },
+    {
+      "path": "kernel/rhino/aos.mk",
+      "sha": "2ef5d283f348e2eb920b9c0043496a08c5a25511",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/aos.mk"
+    },
+    {
+      "path": "kernel/rhino/k_buf_queue.c",
+      "sha": "b71d2f84cb0a72f312522baa7696d8d0d80dd674",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_buf_queue.c"
+    },
+    {
+      "path": "kernel/rhino/k_dyn_mem_proc.c",
+      "sha": "1c9fa461eaaa39ffb7d5630ff7e4fca89bda7ded",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_dyn_mem_proc.c"
+    },
+    {
+      "path": "kernel/rhino/k_err.c",
+      "sha": "d632d30af1526531ed5f55913ef18caaae8a5943",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_err.c"
+    },
+    {
+      "path": "kernel/rhino/k_event.c",
+      "sha": "846524868f7bbb8cb28a7f17988c90d33d341848",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_event.c"
+    },
+    {
+      "path": "kernel/rhino/k_idle.c",
+      "sha": "6eece80a4ce3353a2a781f65c401d0d9300de106",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_idle.c"
+    },
+    {
+      "path": "kernel/rhino/k_mm.c",
+      "sha": "2ed02b83716ae1b87252e6a77359f2510fc84772",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_mm.c"
+    },
+    {
+      "path": "kernel/rhino/k_mm_blk.c",
+      "sha": "81383cc0616a738bfa24ce1d25543af6f2a98687",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_mm_blk.c"
+    },
+    {
+      "path": "kernel/rhino/k_mm_debug.c",
+      "sha": "0be0082ad9d0d742e80615392f57a28eee56328f",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_mm_debug.c"
+    },
+    {
+      "path": "kernel/rhino/k_mutex.c",
+      "sha": "cfaebeb104467571066e16a76be1fecbc743bc29",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_mutex.c"
+    },
+    {
+      "path": "kernel/rhino/k_obj.c",
+      "sha": "6e4366b4bee8c3f1a7cf011e56139e7a1a7f2477",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_obj.c"
+    },
+    {
+      "path": "kernel/rhino/k_pend.c",
+      "sha": "a319faf3cb7f90320f05bb7028cd07f78f2a0d3e",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_pend.c"
+    },
+    {
+      "path": "kernel/rhino/k_queue.c",
+      "sha": "d879b6ebf7ce958f7f87f771dd83d6f936ed7e5b",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_queue.c"
+    },
+    {
+      "path": "kernel/rhino/k_ringbuf.c",
+      "sha": "6332420b08c5e1b241f605b2e178e53b404d7ce4",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_ringbuf.c"
+    },
+    {
+      "path": "kernel/rhino/k_sched.c",
+      "sha": "5dbdcff984cd7459440b73eb2689906f1a7f191e",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_sched.c"
+    },
+    {
+      "path": "kernel/rhino/k_sem.c",
+      "sha": "89821b4561bc9436c08edbda32712f356e00a28f",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_sem.c"
+    },
+    {
+      "path": "kernel/rhino/k_spin_lock.c",
+      "sha": "aa5a2df1590e8f8bd0bc53258e730f04d0a73c45",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_spin_lock.c"
+    },
+    {
+      "path": "kernel/rhino/k_stats.c",
+      "sha": "6f7dad64ade985c16d302b58d898663775430bfa",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_stats.c"
+    },
+    {
+      "path": "kernel/rhino/k_sys.c",
+      "sha": "ba99c3e1f9ba304a4bf9910b402ffdc53f07ca58",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_sys.c"
+    },
+    {
+      "path": "kernel/rhino/k_task.c",
+      "sha": "cec146bfa431c81f96e6aa42a0505cab730d92df",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_task.c"
+    },
+    {
+      "path": "kernel/rhino/k_task_sem.c",
+      "sha": "95c86c09fa2eec010e5b3e2502557dc7f31b20e6",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_task_sem.c"
+    },
+    {
+      "path": "kernel/rhino/k_tick.c",
+      "sha": "a22028a1bcdb1830f6cf6dae7ba05c0a7da34f7e",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_tick.c"
+    },
+    {
+      "path": "kernel/rhino/k_time.c",
+      "sha": "ee36fc6a6983f23910f1c74a9ab9eaf341ab0bb3",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_time.c"
+    },
+    {
+      "path": "kernel/rhino/k_timer.c",
+      "sha": "30b3e0bbc5dd9f59a84183f502caff52c0f347ee",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_timer.c"
+    },
+    {
+      "path": "kernel/rhino/k_workqueue.c",
+      "sha": "24782a1203c4c7d942f10b92f690b2de519d3bb0",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/k_workqueue.c"
+    },
+    {
+      "path": "kernel/rhino/ucube.py",
+      "sha": "d8868b9e8639ded42dd48e03f503089320c4667b",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/ucube.py"
+    },
+    {
+      "path": "kernel/rhino/include/k_api.h",
+      "sha": "3d0a43b866ca90824139f5104a8afac9d246a329",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_api.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_bitmap.h",
+      "sha": "5da9a06cb898db758af8c67e7ab647562c3d52f6",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_bitmap.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_buf_queue.h",
+      "sha": "2ff3bd3f49b418999a44b7701ae92a004a8d6c19",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_buf_queue.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_critical.h",
+      "sha": "fd474d6848f09047fb7558fe39a939d29e67d80d",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_critical.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_default_config.h",
+      "sha": "055f79d0f72ae5be01fc1e48d91a36f177ca451c",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_default_config.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_err.h",
+      "sha": "4676ea94ef1cdcd0fb0ca22782d925cdf00c0187",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_err.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_event.h",
+      "sha": "761fe0a4e573a63a3b358486fc3665008091c173",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_event.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_hook.h",
+      "sha": "7071364be9862006a3f9028c57a2f2d9a5ee151d",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_hook.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_internal.h",
+      "sha": "ef2fc685d17a038e98296ad8de1b9e8e14cf3e1b",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_internal.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_list.h",
+      "sha": "9bbf128b829bf3a4d3af18ae693edaa5daaabd81",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_list.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_mm.h",
+      "sha": "686bf25d7ac4d929789bf7d1b62cbad949c8c810",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_mm.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_mm_blk.h",
+      "sha": "d74db3d30578ca211b0c7c42be9913e3a9712f82",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_mm_blk.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_mm_debug.h",
+      "sha": "49ec2e310c3c3df82404bf5dbe68a652505f4fc7",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_mm_debug.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_mm_region.h",
+      "sha": "e43db09a7918887111778b44f36b167a4ccc3ffa",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_mm_region.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_mutex.h",
+      "sha": "c9df2cb8e15b9b674f9f22b95c4f55f75cac6089",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_mutex.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_obj.h",
+      "sha": "2ff1630f82e84b282c342d95277a64c890551dc0",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_obj.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_queue.h",
+      "sha": "efdfba64a58b0f507c50955969018f939ac5991e",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_queue.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_ringbuf.h",
+      "sha": "107a6844a8d897a645a4eaf37e2b3a4a60b0da11",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_ringbuf.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_sched.h",
+      "sha": "dd8c9a3aa22ce1f9b4ac4aac4bafb0c3ab386a8c",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_sched.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_sem.h",
+      "sha": "b7047dbddec9a1e8c0d79b7826dd8571e1e0a44e",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_sem.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_soc.h",
+      "sha": "0c3456890cb9f1e39b5b761ebb5c247b20c35cc1",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_soc.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_spin_lock.h",
+      "sha": "51c271cf5115135e6ff74495e8d50caa1cb0187a",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_spin_lock.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_stats.h",
+      "sha": "c4b6dfc5399cdd69e250d9f2e2ba28824250dd3f",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_stats.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_sys.h",
+      "sha": "41349d57fb344f5caa4398ce533b9b34d658af64",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_sys.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_task.h",
+      "sha": "f809fbbbdca0d9c6d2b7e78f5d7f9b299dc50e39",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_task.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_task_sem.h",
+      "sha": "6e96f7dc5844d1963d432f9e9c48eaf4477742c9",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_task_sem.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_time.h",
+      "sha": "a29de1d7d2943236c3289e00ce78830cece54af0",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_time.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_timer.h",
+      "sha": "aabc42c65e70c0a0d3072f2025b46d1d6ce96bd4",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_timer.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_trace.h",
+      "sha": "10f7e76c0d69fa455b4dbd718111490a291e8a35",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_trace.h"
+    },
+    {
+      "path": "kernel/rhino/include/k_workqueue.h",
+      "sha": "31bed89991c5a333330569111a5e54833505a593",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/kernel/rhino/include/k_workqueue.h"
+    },
+    {
+      "path": "platform/arch/linux/Config.in",
+      "sha": "97e0e5744a3c69ac117f9a97fcf2f2005b490096",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/Config.in"
+    },
+    {
+      "path": "platform/arch/linux/README.md",
+      "sha": "466956e1d8b4627b3fabd6f88e3fb1e106ab6062",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/README.md"
+    },
+    {
+      "path": "platform/arch/linux/aos.mk",
+      "sha": "26627a98fe11a8775f9b88264e8e5b9ea23898b6",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/aos.mk"
+    },
+    {
+      "path": "platform/arch/linux/cpu_impl.c",
+      "sha": "58569e5885ef26b9f608bf2a90350715543b9675",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/cpu_impl.c"
+    },
+    {
+      "path": "platform/arch/linux/swap.S",
+      "sha": "06cb0388c8d4e5b8a1573028142aea8bf14e6e79",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/swap.S"
+    },
+    {
+      "path": "platform/arch/linux/swap.h",
+      "sha": "b3a66459d5ad6b4e3d7b55c7c861fa6b7fd285c1",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/swap.h"
+    },
+    {
+      "path": "platform/arch/linux/ucube.py",
+      "sha": "55adce14a9135d980f1c804ffeb687ca8ab9ae60",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/ucube.py"
+    },
+    {
+      "path": "platform/arch/linux/include/cpu_event.h",
+      "sha": "0682fdc8267d23a58fb593a930070c1a8b90ee72",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/include/cpu_event.h"
+    },
+    {
+      "path": "platform/arch/linux/include/k_compiler.h",
+      "sha": "421870ab65fde32b4073a2a64553cf02ffc2174e",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/include/k_compiler.h"
+    },
+    {
+      "path": "platform/arch/linux/include/k_types.h",
+      "sha": "955a36f90aed1cab77bd48666ec7dae8f59a4134",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/include/k_types.h"
+    },
+    {
+      "path": "platform/arch/linux/include/port.h",
+      "sha": "ce25dc562d9a6e183295d877824616f25c85285c",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/arch/linux/include/port.h"
+    },
+    {
+      "path": "include/aos/canopen.h",
+      "sha": "ce446a0f2c62168db29e410af081fce36b09bc0c",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/canopen.h"
+    },
+    {
+      "path": "include/aos/cli.h",
+      "sha": "754e7eab3122ecb436a92df16ad04f90e4ca18a3",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/cli.h"
+    },
+    {
+      "path": "include/aos/compiler.h",
+      "sha": "4ebc896a66bbfc565370ca812ffa7ad2a842afc9",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/compiler.h"
+    },
+    {
+      "path": "include/aos/errno.h",
+      "sha": "2bc5d92d6364bbe592e8f85b561e9389609d4827",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/errno.h"
+    },
+    {
+      "path": "include/aos/kernel.h",
+      "sha": "78c03faa673fd0b38aec60912ebf8f179077a0be",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/kernel.h"
+    },
+    {
+      "path": "include/aos/kv.h",
+      "sha": "b1cf75cb9e836681d30e889ababb8da9269257c2",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/kv.h"
+    },
+    {
+      "path": "include/aos/list.h",
+      "sha": "f64e2b3a20166b45eecc310a85a994b7a9f1a666",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/list.h"
+    },
+    {
+      "path": "include/aos/mbmaster.h",
+      "sha": "97488c9c2eb18edd0b4a306583686273cfcc33d8",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/mbmaster.h"
+    },
+    {
+      "path": "include/aos/pwrmgmt.h",
+      "sha": "f8353c87981445e03a38a00b0a6dd5a7208d0159",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/pwrmgmt.h"
+    },
+    {
+      "path": "include/aos/vfs.h",
+      "sha": "cb55dd17acd3e242b6b955c4ef59f29df5291868",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/include/aos/vfs.h"
+    },
+    {
+      "path": "board/linuxhost/Config.in",
+      "sha": "b63cb1e6df247c18d3b8e0f0518d32825b3c7ea5",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/board/linuxhost/Config.in"
+    },
+    {
+      "path": "board/linuxhost/README.md",
+      "sha": "1068754b35a6a609b1b8b9d3bbfd3792399a41c3",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/board/linuxhost/README.md"
+    },
+    {
+      "path": "board/linuxhost/aos.mk",
+      "sha": "bf9d9b66510b0c6629d8a4b67e9f7a3bd85e590e",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/board/linuxhost/aos.mk"
+    },
+    {
+      "path": "board/linuxhost/atcmd_config_platform.h",
+      "sha": "9a9c331bb20519d3003e390c874d4d260c074dda",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/board/linuxhost/atcmd_config_platform.h"
+    },
+    {
+      "path": "board/linuxhost/k_config.h",
+      "sha": "273d6a609675708941e812dfcb92236fdb05c229",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/board/linuxhost/k_config.h"
+    },
+    {
+      "path": "board/linuxhost/ucube.py",
+      "sha": "e183baaf3045fb9a4ad69d487dc21bb66ecde80f",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/board/linuxhost/ucube.py"
+    },
+    {
+      "path": "platform/mcu/linux/soc/hook_impl.c",
+      "sha": "b5026a529a5a65201011226bc1c1514057703158",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/mcu/linux/soc/hook_impl.c"
+    },
+    {
+      "path": "platform/mcu/linux/soc/soc_impl.c",
+      "sha": "c7e69f4e495d1503f752088df6603f0df4bc42f3",
+      "url": "https://raw.githubusercontent.com/alibaba/AliOS-Things/bacc144bdc5df8fe8e302e3732675a920aa40bc5/platform/mcu/linux/soc/soc_impl.c"
+    }
+  ]
+}

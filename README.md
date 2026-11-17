@@ -1,3 +1,7 @@
+## TenonOS-inspired EunoBench complete test
+
+[测试说明](benchmark/README.md) · [完整报告](results/full-test-20261117/REPORT_CN.md) · [Evidence release](https://github.com/elokuucadiaN/artifact-7c4e9a/releases/tag/full-test-20261117)
+
 # EunoBench: Anonymous Review Artifact
 
 **Documentation updated 2026-11-09.** This is the current, bounded review snapshot. It replaces

@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+set(COMPONENTS main freertos)
+set(COMPONENT_DIRS "${CMAKE_CURRENT_LIST_DIR}/main")
+foreach(component freertos esp_common esp_system heap log linux soc hal esp_rom esp_hw_support esp_timer newlib)
+  list(APPEND COMPONENT_DIRS "$ENV{IDF_PATH}/components/${component}")
+endforeach()
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(euno_idf_probe)

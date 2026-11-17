@@ -1,0 +1,19 @@
+metric_id,configuration,parameters,unit,execution_scope,sample_kind,records,independent_guests,independent_processes,source_statistic,median,minimum,maximum,board_comparison_eligible,original_overall_eligible
+image.allocated_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,{},byte,cross_compiled_firmware,static_build,1,0,0,static,42250,42250,42250,False,False
+image.linker_region_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""region"": ""FLASH""}",byte,cross_compiled_firmware,static_build,1,0,0,static,26704,26704,26704,False,False
+image.linker_region_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""region"": ""RAM""}",byte,cross_compiled_firmware,static_build,1,0,0,static,15872,15872,15872,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": "".ARM.exidx""}",byte,cross_compiled_firmware,static_build,1,0,0,static,8,8,8,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": "".last_section""}",byte,cross_compiled_firmware,static_build,1,0,0,static,4,4,4,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""bss""}",byte,cross_compiled_firmware,static_build,1,0,0,static,762,762,762,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""datas""}",byte,cross_compiled_firmware,static_build,1,0,0,static,200,200,200,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""device_area""}",byte,cross_compiled_firmware,static_build,1,0,0,static,240,240,240,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""device_states""}",byte,cross_compiled_firmware,static_build,1,0,0,static,24,24,24,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""initlevel""}",byte,cross_compiled_firmware,static_build,1,0,0,static,128,128,128,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""k_heap_area""}",byte,cross_compiled_firmware,static_build,1,0,0,static,24,24,24,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""k_sem_area""}",byte,cross_compiled_firmware,static_build,1,0,0,static,32,32,32,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""log_const_area""}",byte,cross_compiled_firmware,static_build,1,0,0,static,24,24,24,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""noinit""}",byte,cross_compiled_firmware,static_build,1,0,0,static,14784,14784,14784,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""rodata""}",byte,cross_compiled_firmware,static_build,1,0,0,static,5640,5640,5640,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""rom_start""}",byte,cross_compiled_firmware,static_build,1,0,0,static,1024,1024,1024,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""sw_isr_table""}",byte,cross_compiled_firmware,static_build,1,0,0,static,256,256,256,False,False
+image.section_bytes,Zephyr 3.7.0 / ARM mps2 QEMU firmware,"{""section"": ""text""}",byte,cross_compiled_firmware,static_build,1,0,0,static,19100,19100,19100,False,False

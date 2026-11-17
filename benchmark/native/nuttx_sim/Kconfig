@@ -1,0 +1,3 @@
+config EXAMPLES_EUNO
+    bool "Euno native simulator probes"
+    default n
