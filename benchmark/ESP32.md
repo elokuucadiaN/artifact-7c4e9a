@@ -34,3 +34,19 @@ python -m benchmark.export_esp32 --output <export> --package
 ```
 
 The exporter uses pyelftools. It replays UART records, reconciles them with the recorded CSV, then exports per-reset values, medians and ranges, firmware hashes and allocated ELF sections. Each point in a summary has five independent reset-level samples. See the result report for per-probe endpoints and scope.
+
+## Board-input energy and reset timing
+
+Wire the POWER-Z KM003C inline with the board's only USB power source. Connect the meter's side data port separately. The example below uses the Windows meter's virtual serial port and ESP32's CH340 UART.
+
+```powershell
+python -B -m benchmark.capture_esp32_power --port COM6 --meter-port COM7 --os zephyr --tickless 0 --resets 5 --output "<run UNC path>\zephyr-baseline-fixed"
+```
+
+Run the capture for each configuration from the artifact root. The latest Zephyr source parks the main thread after the completion marker, which allows the capture to observe a settled idle window. The power sampler keeps the signed voltage/current responses and the UART timestamps on one host clock. The application and reset measurements are aligned to complete UART marker receipt and include USB/serial latency.
+
+```bash
+python -B -m benchmark.export_esp32_power <run>
+```
+
+The replay checks raw UART lines, meter frames, sample gaps and the fixed current orientation. It produces separate power/timing and firmware-probe CSVs.

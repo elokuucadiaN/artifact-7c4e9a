@@ -180,3 +180,5 @@ private provenance map or full private reproduction archive is included.
 ## ESP32 hardware supplement
 
 [Report](results/esp32-board-20261122/REPORT_CN.md) · [Build and capture](benchmark/ESP32.md)
+
+[ESP32 power and reset timing report](results/esp32-power-20261122/REPORT_CN.md)

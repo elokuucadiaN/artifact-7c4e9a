@@ -125,8 +125,11 @@ int main(void) {
     unsigned n[]={2,10,20,50,100},t[]={1,10,20,50,100};
     for(unsigned i=0;i<5;i++)switch_test(n[i]);
     for(unsigned i=0;i<5;i++)timer_test(t[i]);
-    printf("ZOS_DONE failures=%d\n",failures);fflush(stdout);
-#ifndef EUNO_ESP32
+    printf("ZOS_DONE failures=%d\n",failures);
+#ifdef EUNO_ESP32
+    k_sleep(K_FOREVER);
+#else
+    fflush(stdout);
     nsi_exit(failures?1:0);
 #endif
     return failures;

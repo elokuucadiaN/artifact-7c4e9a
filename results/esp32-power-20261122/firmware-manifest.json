@@ -1,0 +1,338 @@
+{
+  "scope": "ESP32 energy and reset measurement",
+  "configurations": [
+    {
+      "configuration": "freertos",
+      "upstream_commit": "9b74d1aca5f2154c4ea609d6e36d513dcf91148b",
+      "runtime": {
+        "os": "FreeRTOS",
+        "idf": "v5.2.5-dirty",
+        "clock_hz": "240000000",
+        "tick_hz": "100",
+        "core": "0",
+        "mode": "fixed"
+      },
+      "firmware_origin": "original hardware supplement image",
+      "firmware": {
+        "bootloader.bin": {
+          "bytes": 24448,
+          "sha256": "1dfd9e294f0570525c46339a8ad3cccfb59ee01fba8f3a32874e232c2ed4ad9f"
+        },
+        "euno_esp32.bin": {
+          "bytes": 143200,
+          "sha256": "7ef681032355cd4468a48aab91a927495f6767e6fb36ee7f3f6c2543d15418c2"
+        },
+        "euno_esp32.elf": {
+          "bytes": 2282804,
+          "sha256": "a9067081e571160842bc9421cf047248090d344d5bd3bcf3db2f91cbab006689"
+        },
+        "euno_esp32.map": {
+          "bytes": 1876195,
+          "sha256": "cc6c9d830415cb1c973ebabb7839ef2c52a9504d06bfb47b56560c8bc30981ee"
+        },
+        "flasher_args.json": {
+          "bytes": 915,
+          "sha256": "e9e210730f048370a7a52f49524601c178b14e167a58f99f418014d5d39becdf"
+        },
+        "partition-table.bin": {
+          "bytes": 3072,
+          "sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+        },
+        "sdkconfig.json": {
+          "bytes": 28880,
+          "sha256": "9dc2b1570915b88b7058fd87f5ffc7bdea82ec7e039da3f0581325978da4b6fd"
+        }
+      }
+    },
+    {
+      "configuration": "nuttx",
+      "upstream_commit": "148c631a2d252d4d59ae4cd90d1890d2daed381d",
+      "runtime": {
+        "os": "NuttX",
+        "version": "12.2.1",
+        "counter_hz": "240000000",
+        "tick_us": "10000"
+      },
+      "firmware_origin": "original hardware supplement image",
+      "firmware": {
+        ".config": {
+          "bytes": 35730,
+          "sha256": "7424bb8a683b8cc25d7e7b90a580f963cf60c90f1f0c6c2c2d3c97d2210188de"
+        },
+        "System.map": {
+          "bytes": 21854,
+          "sha256": "4f8417c4a5fb2c73fc53ad5344643f4e7b9c02a3f54664d3a0e41e4ba77928da"
+        },
+        "nuttx": {
+          "bytes": 122480,
+          "sha256": "7864cd78e70a017113cc107aceca5ebd9b63b785f33123ad61bbb9e038ca150e"
+        },
+        "nuttx.bin": {
+          "bytes": 112240,
+          "sha256": "57c35b98aa3c879b00915720699c6bdf3e84284b45fd04d6594c58a1778fc14e"
+        }
+      }
+    },
+    {
+      "configuration": "riot",
+      "upstream_commit": "dd06b3727c41c2c44bf93f47ff7831fdd501d68b",
+      "runtime": {
+        "os": "RIOT",
+        "version": "dd06b372",
+        "clock_hz": "240000000"
+      },
+      "firmware_origin": "original hardware supplement image",
+      "firmware": {
+        "bootloader.bin": {
+          "bytes": 15728,
+          "sha256": "e30b3b4efa04562c38f07c70052e63c384007d9dcacc0421b89506708726f631"
+        },
+        "eunobench_probes.elf": {
+          "bytes": 2780896,
+          "sha256": "8f58747c1fd9d342653aca537e39f593db68161f5eaa144f6279758a388c63c9"
+        },
+        "eunobench_probes.elf.bin": {
+          "bytes": 127568,
+          "sha256": "67b15bb4714cf629faffa272cdf5b25db98fcce71fd01c0fda9529d8768bd742"
+        },
+        "eunobench_probes.map": {
+          "bytes": 3988298,
+          "sha256": "832c17b57f626de2f668062b29713f5deb99a57bf93b2ef39c347f9ef25ca439"
+        },
+        "partitions.bin": {
+          "bytes": 3072,
+          "sha256": "7186a37ac6f1e79b1f6bc3279ab47e9e62dd69a7fa066d2ea1f5a40c8b060b74"
+        }
+      }
+    },
+    {
+      "configuration": "zephyr-autoos_policy-fixed",
+      "upstream_commit": "36940db938a8f4a1e919496793ed439850a221c2",
+      "runtime": {
+        "os": "Zephyr",
+        "version": "3.7.0",
+        "tick_hz": "100",
+        "counter_hz": "240000000",
+        "tickless": "0"
+      },
+      "firmware_origin": "esp32_main_ends_in_blocked_idle; Kconfig and OS commit retained",
+      "firmware": {
+        ".config": {
+          "bytes": 30220,
+          "sha256": "167e6192d284aadc78bb2be4c47f5d5d32ff068fff6c1e42df6291dc6f18df81"
+        },
+        "probe.conf": {
+          "bytes": 399,
+          "sha256": "0d65595d7f708335d27e08d9cf73a6e32b4ca7223f1867892499f2b5b8da4a2f"
+        },
+        "runners.yaml": {
+          "bytes": 1019,
+          "sha256": "c84bdf09555eb1ea0130d24e53b902244a589fa131a01f26927315470b48d03e"
+        },
+        "zephyr.bin": {
+          "bytes": 135176,
+          "sha256": "2794f76d0af77ef92543bd80587387bbf7f6f8fa3edb181d6c97d6bc25e2fe1d"
+        },
+        "zephyr.elf": {
+          "bytes": 1821212,
+          "sha256": "bdab6a6bc5212883b3c57b657bd07318d100791bedc3f61f0af21a773282eb35"
+        },
+        "zephyr.map": {
+          "bytes": 848057,
+          "sha256": "585a647992fba255ace7a664220aa0856fba04fe88934ca1596f0f5eb6a18dcc"
+        }
+      }
+    },
+    {
+      "configuration": "zephyr-autoos_policy-tickless",
+      "upstream_commit": "36940db938a8f4a1e919496793ed439850a221c2",
+      "runtime": {
+        "os": "Zephyr",
+        "version": "3.7.0",
+        "tick_hz": "100",
+        "counter_hz": "240000000",
+        "tickless": "1"
+      },
+      "firmware_origin": "esp32_main_ends_in_blocked_idle; Kconfig and OS commit retained",
+      "firmware": {
+        ".config": {
+          "bytes": 30209,
+          "sha256": "d41a04a5700d46ad9209e204dd5e852b14f21916d7b0855731ee2ec8083dcf93"
+        },
+        "probe.conf": {
+          "bytes": 399,
+          "sha256": "781047a50e9946ab0c5ff5053340d8413d1b5ce7bbb1959f572657787cc65823"
+        },
+        "runners.yaml": {
+          "bytes": 1019,
+          "sha256": "c84bdf09555eb1ea0130d24e53b902244a589fa131a01f26927315470b48d03e"
+        },
+        "zephyr.bin": {
+          "bytes": 135176,
+          "sha256": "6f2f17efd33b04c9373e95dd295142ec90a0a7ace906063fabf2aff298828ab4"
+        },
+        "zephyr.elf": {
+          "bytes": 1824356,
+          "sha256": "388adf7471c5630a45753b669a868e6172c9b02b496b84ee286befffeb82cb22"
+        },
+        "zephyr.map": {
+          "bytes": 848611,
+          "sha256": "6e546ac99300dd43748dea1199e68708cc4e331cbe6599eb5dcdba537856569c"
+        }
+      }
+    },
+    {
+      "configuration": "zephyr-baseline-fixed",
+      "upstream_commit": "36940db938a8f4a1e919496793ed439850a221c2",
+      "runtime": {
+        "os": "Zephyr",
+        "version": "3.7.0",
+        "tick_hz": "100",
+        "counter_hz": "240000000",
+        "tickless": "0"
+      },
+      "firmware_origin": "esp32_main_ends_in_blocked_idle; Kconfig and OS commit retained",
+      "firmware": {
+        ".config": {
+          "bytes": 30255,
+          "sha256": "fa0e06ca2f483d4b3b22b75f680335b93ea41c7c7707970264ee3a9bc34c11ed"
+        },
+        "probe.conf": {
+          "bytes": 391,
+          "sha256": "df5be2650c0af29a98f8dfbe2438f1e68862977fc7186c4277bfd5d3f7b4c751"
+        },
+        "runners.yaml": {
+          "bytes": 1019,
+          "sha256": "c84bdf09555eb1ea0130d24e53b902244a589fa131a01f26927315470b48d03e"
+        },
+        "zephyr.bin": {
+          "bytes": 135092,
+          "sha256": "e9bde220181eeb3fa4e7bd2b05d47bbd6b305b0e9288ecf26ccc10ab408be6dc"
+        },
+        "zephyr.elf": {
+          "bytes": 1779840,
+          "sha256": "d3e17afce6369cbec198eebd716c8abbdb741daf7b1bc67704a7e6592998a00d"
+        },
+        "zephyr.map": {
+          "bytes": 844398,
+          "sha256": "f63c75358d246c8ff35579b882dc1459cd548f9831e583054422b2fcba5bc492"
+        }
+      }
+    },
+    {
+      "configuration": "zephyr-baseline-tickless",
+      "upstream_commit": "36940db938a8f4a1e919496793ed439850a221c2",
+      "runtime": {
+        "os": "Zephyr",
+        "version": "3.7.0",
+        "tick_hz": "100",
+        "counter_hz": "240000000",
+        "tickless": "1"
+      },
+      "firmware_origin": "esp32_main_ends_in_blocked_idle; Kconfig and OS commit retained",
+      "firmware": {
+        ".config": {
+          "bytes": 30244,
+          "sha256": "c0640687238717d34a5c72023e425810f1e06aced1f7be891277c26f23b655c9"
+        },
+        "probe.conf": {
+          "bytes": 391,
+          "sha256": "97df54d262b22f0490a0b4539ae8e6767a1909737ab4bc1908233aa450815679"
+        },
+        "runners.yaml": {
+          "bytes": 1019,
+          "sha256": "c84bdf09555eb1ea0130d24e53b902244a589fa131a01f26927315470b48d03e"
+        },
+        "zephyr.bin": {
+          "bytes": 135092,
+          "sha256": "f7727bb1d0864aa2edc10d27c216f7dca27ec460e307d1b009e7e09abc473b44"
+        },
+        "zephyr.elf": {
+          "bytes": 1782980,
+          "sha256": "62494436c72f65033bacaef8378b074e7785adeeb0512e750523eb7582855600"
+        },
+        "zephyr.map": {
+          "bytes": 844952,
+          "sha256": "608ec5f5a5ea90abb350d7b537dedc67a68985eacb489097f95c90d7335ff5db"
+        }
+      }
+    },
+    {
+      "configuration": "zephyr-qwen_policy-fixed",
+      "upstream_commit": "36940db938a8f4a1e919496793ed439850a221c2",
+      "runtime": {
+        "os": "Zephyr",
+        "version": "3.7.0",
+        "tick_hz": "100",
+        "counter_hz": "240000000",
+        "tickless": "0"
+      },
+      "firmware_origin": "esp32_main_ends_in_blocked_idle; Kconfig and OS commit retained",
+      "firmware": {
+        ".config": {
+          "bytes": 30220,
+          "sha256": "72469520cf84594ac5f54723bf135da2029d72b9003460252de5934decb3d0e7"
+        },
+        "probe.conf": {
+          "bytes": 397,
+          "sha256": "d78527922183f184926ecae68e0435f269dcc1f4a382b8e2cbe57d3d0bff7c0f"
+        },
+        "runners.yaml": {
+          "bytes": 1019,
+          "sha256": "c84bdf09555eb1ea0130d24e53b902244a589fa131a01f26927315470b48d03e"
+        },
+        "zephyr.bin": {
+          "bytes": 135176,
+          "sha256": "4c8c3a175046aab701d4ae28be25f21b7a5efa37532e289e4e88820a0186b36d"
+        },
+        "zephyr.elf": {
+          "bytes": 1824168,
+          "sha256": "0da37f21848d71123bc8634423060cd7c1bc49e2bd37cdf08b835c54d386d745"
+        },
+        "zephyr.map": {
+          "bytes": 847509,
+          "sha256": "a33bbe614def0a412a3ad38d5caa76b0b905840d426cecce2bf536173684e383"
+        }
+      }
+    },
+    {
+      "configuration": "zephyr-qwen_policy-tickless",
+      "upstream_commit": "36940db938a8f4a1e919496793ed439850a221c2",
+      "runtime": {
+        "os": "Zephyr",
+        "version": "3.7.0",
+        "tick_hz": "100",
+        "counter_hz": "240000000",
+        "tickless": "1"
+      },
+      "firmware_origin": "esp32_main_ends_in_blocked_idle; Kconfig and OS commit retained",
+      "firmware": {
+        ".config": {
+          "bytes": 30209,
+          "sha256": "fd14613ee10de0ee836cd2a77d5e10923a1525b5e83a1e6db9bfd97c432fe45f"
+        },
+        "probe.conf": {
+          "bytes": 397,
+          "sha256": "e0a06540719449ebb0fda8a25536b8c7f8a372b6a90de9ff8661316e7b8d118a"
+        },
+        "runners.yaml": {
+          "bytes": 1019,
+          "sha256": "c84bdf09555eb1ea0130d24e53b902244a589fa131a01f26927315470b48d03e"
+        },
+        "zephyr.bin": {
+          "bytes": 135176,
+          "sha256": "96d0c4c78749329716b6210515190d45a47e98d89d3ae1d5f78d20e3d053d06e"
+        },
+        "zephyr.elf": {
+          "bytes": 1827304,
+          "sha256": "6bbfcff6e66a944512377b2b1808d952d6484e99a08bc461885abb7e50ec8068"
+        },
+        "zephyr.map": {
+          "bytes": 848063,
+          "sha256": "8400fa6b258455d9e631afe62ab18828fd42e1f5f2384f440888a410e6fcb13c"
+        }
+      }
+    }
+  ],
+  "original_overall_eligible": false
+}
