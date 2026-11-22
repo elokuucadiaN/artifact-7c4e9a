@@ -1,7 +1,0 @@
-os,upstream_commit,status,paper_version_match,independent_processes
-freertos,9b74d1aca5f2154c4ea609d6e36d513dcf91148b,passed,True,3
-zephyr,36940db938a8f4a1e919496793ed439850a221c2,passed,True,3
-riot,dd06b3727c41c2c44bf93f47ff7831fdd501d68b,passed,True,3
-contiki,c02eedae8b187123069891f81a7111b833701f9c,passed,True,3
-alios,bacc144bdc5df8fe8e302e3732675a920aa40bc5,passed,True,3
-nuttx,148c631a2d252d4d59ae4cd90d1890d2daed381d,passed,True,3
