@@ -12,7 +12,7 @@
 
 ## 结果和复现
 
-完整报告及统计见 `results/full-test-20261117/`。Release 提供原始 stdout/stderr、配置、版本身份、源码统计快照、链接镜像和哈希 manifest。保留测量字节与记录绑定，省略不参与结果重放的编译缓存和宿主机活动记录。
+ESP32 真板报告及结果见 [results/esp32-board-20261122](../results/esp32-board-20261122/REPORT_CN.md)。[采集与构建说明](ESP32.md)。
 
 在 WSL Linux 工作目录准备 `native/SOURCE_SETUP.md` 所列版本和依赖后运行：
 

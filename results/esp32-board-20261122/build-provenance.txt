@@ -1,0 +1,29 @@
+Hardware: ESP32-D0WDQ6 rev 1.1; crystal 40 MHz; 4 MiB SPI flash; UART 115200
+Capture host: Windows + WSL2 Ubuntu 22.04; CH340 USB-to-UART; RTS reset
+Firmware flashing: esptool 4.8.1, DIO, 4 MB, 40 MHz
+Compiler: 13.2.0
+RIOT compiler: xtensa-esp32-elf-gcc (crosstool-NG esp-12.2.0_20230208) 12.2.0
+ESP-IDF: 9b74d1aca5f2154c4ea609d6e36d513dcf91148b
+ESP-IDF original nested dependency pins:
+160000 commit 24c60e243580c7868f4334a1ba3123481fe1aa48	components/bootloader/subproject/components/micro-ecc/micro-ecc
+160000 commit d2e28f872472ffc6a704faae65ddee1f24e2dfba	components/heap/tlsf
+160000 commit 98fcfd6d2cea90d306e8fde8e5bffd6087c9cda8	components/mbedtls/mbedtls
+160000 commit cac1552e62b0474c162547b7cce345d7cd1aecfe	components/mqtt/esp-mqtt
+ESP-IDF dirty paths:
+ M components/bootloader/subproject/components/micro-ecc/micro-ecc
+ M components/heap/tlsf
+ M components/mbedtls/mbedtls
+Zephyr: 36940db938a8f4a1e919496793ed439850a221c2
+Zephyr hal_espressif: 87e7902d7184a8280b4d13bce79801a723f4ddd8
+    - name: hal_xtensa
+      revision: a2d658525b16c57bea8dd565f5bd5167e4b9f1ee
+      path: modules/hal/xtensa
+RIOT upstream: dd06b3727c41c2c44bf93f47ff7831fdd501d68b
+RIOT ESP-IDF package upstream: 1329b19fe494500aeb79d19b27cfd99b40c37aec
+NuttX:
+{
+  "nuttx_version": "12.2.1",
+  "nuttx_commit": "148c631a2d252d4d59ae4cd90d1890d2daed381d",
+  "release_sha512": "d781d2cd7fe3215225a80be464d1ef57b7a9bf407c0965acc34132910881f38110b73efc91a5cebad3f5dd2263af7146ee115a8077bbd176cdc8a7b80829aaa2",
+  "apps_tree": "b30115d1758295c009b63d2a038df37779eb0b55"
+}

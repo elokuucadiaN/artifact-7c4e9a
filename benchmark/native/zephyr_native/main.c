@@ -2,9 +2,16 @@
 #include <zephyr/kernel.h>
 #include <stdio.h>
 #include <stdint.h>
+#include "probe_clock.h"
+#ifndef EUNO_ESP32
 #include <time.h>
+#endif
 
+#ifdef EUNO_ESP32
+K_THREAD_STACK_ARRAY_DEFINE(stacks,100,1280);
+#else
 K_THREAD_STACK_ARRAY_DEFINE(stacks,100,4096);
+#endif
 static struct k_thread threads[100];
 static struct k_timer timers[100];
 K_SEM_DEFINE(done,0,1);
@@ -13,21 +20,27 @@ static volatile uint64_t first,last;
 static unsigned workers;
 static volatile unsigned seen[100],callbacks,errors;
 static int failures;
-static uint64_t boot_start, boot_end, expected[100], body_ns;
+static uint64_t expected[100], body_ns;
 static int64_t max_offset;
+#ifndef EUNO_ESP32
+static uint64_t boot_start, boot_end;
 extern void nsi_exit(int status);
+#endif
 #ifdef EUNO_MATRIX
 extern void euno_matrix_timer_begin(void);
 extern void euno_matrix_timer_end(unsigned n);
 extern int euno_matrix_irq(void);
 #endif
 
-static uint64_t now(void) {
+#ifndef EUNO_ESP32
+uint64_t euno_host_now(void) {
     struct timespec t; clock_gettime(CLOCK_MONOTONIC,&t);
     return (uint64_t)t.tv_sec*1000000000ull+t.tv_nsec;
 }
 void __real_z_cstart(void);
-void __wrap_z_cstart(void) {boot_start=now();__real_z_cstart();}
+void __wrap_z_cstart(void) {boot_start=euno_host_now();__real_z_cstart();}
+#endif
+#define now probe_now
 typedef struct k_sem more_sem_t;
 static unsigned more_bad;
 static void more_peer(void);
@@ -96,9 +109,15 @@ static void timer_test(unsigned n) {
     failures+=errors!=0;
 }
 int main(void) {
+#ifdef EUNO_ESP32
+    printf("ZOS_META os=Zephyr version=3.7.0 port=esp32 hardware_measurement=1\n");
+    printf("ZOS_HW tick_hz=%d counter_hz=%u tickless=%d\n", CONFIG_SYS_CLOCK_TICKS_PER_SEC,
+           sys_clock_hw_cycles_per_sec(), IS_ENABLED(CONFIG_TICKLESS_KERNEL));
+#else
     boot_end=now();
     puts("ZOS_META os=Zephyr version=3.7.0 port=native_sim hardware_measurement=0");
     printf("ZOS_MORE_META profile=extended-v2\nZOS_BOOT elapsed_ns=%llu entry=z_cstart end=benchmark_main valid=%u\n",(unsigned long long)(boot_end-boot_start),boot_start>0 && boot_end>=boot_start);
+#endif
     more_tests();
 #ifdef EUNO_MATRIX
     failures+=euno_matrix_irq();
@@ -106,5 +125,9 @@ int main(void) {
     unsigned n[]={2,10,20,50,100},t[]={1,10,20,50,100};
     for(unsigned i=0;i<5;i++)switch_test(n[i]);
     for(unsigned i=0;i<5;i++)timer_test(t[i]);
-    printf("ZOS_DONE failures=%d\n",failures);fflush(stdout);nsi_exit(failures?1:0);return failures;
+    printf("ZOS_DONE failures=%d\n",failures);fflush(stdout);
+#ifndef EUNO_ESP32
+    nsi_exit(failures?1:0);
+#endif
+    return failures;
 }

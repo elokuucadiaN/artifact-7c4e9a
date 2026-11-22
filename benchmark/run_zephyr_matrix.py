@@ -2,7 +2,7 @@
 import argparse,json,os,shutil,subprocess,sys
 from pathlib import Path
 from .run_native_batch import APP,BASE,command,save,sha,sections,validate,git_source
-POLICIES={'baseline':('DUMB','DUMB'),'qwen_policy':('MULTIQ','SCALABLE'),'autoos_policy':('SCALABLE','SCALABLE')}
+from .version_policy import ZEPHYR_POLICIES as POLICIES
 def extra(text):
     def rows(tag):return [dict(s.split('=',1) for s in line.split()[1:]) for line in text.splitlines() if line.startswith(tag+' ')]
     irq=rows('ZOS_OFFLOAD');timers=rows('ZOS_ANNOUNCE')

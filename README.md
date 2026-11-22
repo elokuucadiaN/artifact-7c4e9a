@@ -176,3 +176,7 @@ TLSF licensing/linking exceptions and notices. Only this selected redacted
 review copy is authorized for distribution; it does not grant a blanket
 open-source license to the project. No manuscript draft, credential, original
 private provenance map or full private reproduction archive is included.
+
+## ESP32 hardware supplement
+
+[Report](results/esp32-board-20261122/REPORT_CN.md) · [Build and capture](benchmark/ESP32.md)

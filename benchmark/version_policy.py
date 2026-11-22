@@ -1,4 +1,4 @@
-"""Paper source revisions: a simulator rebuild may change its board, never its OS revision."""
+"""Upstream revisions and Zephyr policy selections for the EunoBench supplements."""
 PINS = {
     'freertos': '9b74d1aca5f2154c4ea609d6e36d513dcf91148b', # ESP-IDF v5.2.5
     'zephyr': '36940db938a8f4a1e919496793ed439850a221c2', # v3.7.0
@@ -6,6 +6,11 @@ PINS = {
     'contiki': 'c02eedae8b187123069891f81a7111b833701f9c',
     'alios': 'bacc144bdc5df8fe8e302e3732675a920aa40bc5',
     'nuttx': '148c631a2d252d4d59ae4cd90d1890d2daed381d', # 12.2.1
+}
+ZEPHYR_POLICIES = {
+    'baseline': ('DUMB', 'DUMB'),
+    'qwen_policy': ('MULTIQ', 'SCALABLE'),
+    'autoos_policy': ('SCALABLE', 'SCALABLE'),
 }
 TAGS={'freertos':'FOS','zephyr':'ZOS','riot':'ROS','contiki':'COS','alios':'AOS','nuttx':'NOS'}
 META={

@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+set(COMPONENTS main)
+set(COMPONENT_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/main")
+file(GLOB candidates "$ENV{IDF_PATH}/components/*")
+foreach(component IN LISTS candidates)
+    get_filename_component(name "${component}" NAME)
+    # The standalone kernel application does not use the optional MQTT submodule.
+    if(EXISTS "${component}/CMakeLists.txt" AND NOT name STREQUAL "mqtt")
+        list(APPEND COMPONENT_DIRS "${component}")
+    endif()
+endforeach()
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(euno_esp32)

@@ -1,4 +1,4 @@
-/* RIOT native target functional probes; ztimer clock is not MCU CPU cycles. */
+/* RIOT scheduler and ztimer probes for native and ESP32 builds. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -7,9 +7,13 @@
 #include "ztimer.h"
 #include "irq.h"
 #include "sema.h"
+#ifdef EUNO_ESP32
+#include "sdkconfig.h"
+static _Alignas(16) char stacks[100][1024];
+#else
 #include <time.h>
-
 static char stacks[100][THREAD_STACKSIZE_DEFAULT];
+#endif
 static thread_t *coordinator;
 static volatile unsigned visits[100],finished,previous,transitions;
 static unsigned workers;
@@ -17,11 +21,14 @@ static volatile uint32_t first,last;
 static ztimer_t timers[100];
 static volatile unsigned seen[100],callbacks,errors;
 static int failures;
-static uint64_t boot_start,boot_end,expected[100],body_ns;
+static uint64_t expected[100],body_ns;
 static int64_t max_offset;
+#ifndef EUNO_ESP32
+static uint64_t boot_start;
 static uint64_t host_now(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return (uint64_t)t.tv_sec*1000000000ULL+t.tv_nsec;}
 void __real_kernel_init(void);
 void __wrap_kernel_init(void){boot_start=host_now();__real_kernel_init();}
+#endif
 static uint64_t more_now(void){return (uint64_t)ztimer_now(ZTIMER_USEC)*1000ULL;}
 typedef sema_t more_sem_t;
 static unsigned more_bad;
@@ -87,13 +94,23 @@ static void timer_test(unsigned n) {
     failures+=errors!=0;
 }
 int main(void) {
-    boot_end=host_now();
     coordinator=thread_get_active();
+#ifdef EUNO_ESP32
+    puts("ROS_META os=RIOT version=dd06b372 port=esp32 counter=ztimer_usec hardware_measurement=1");
+    printf("ROS_HW clock_hz=%lu\n", (unsigned long)CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ * 1000000);
+#else
+    uint64_t boot_end=host_now();
     puts("ROS_META os=RIOT version=dd06b372 port=native64 counter=ztimer_usec hardware_measurement=0");
     printf("ROS_MORE_META profile=extended-v2\nROS_BOOT elapsed_ns=%llu entry=kernel_init end=benchmark_main valid=%u\n",(unsigned long long)(boot_end-boot_start),boot_start>0 && boot_end>=boot_start);
+#endif
     more_tests();
     unsigned n[]={2,10,20,50,100},t[]={1,10,20,50,100};
     for(unsigned i=0;i<5;i++)switch_test(n[i]);
     for(unsigned i=0;i<5;i++)timer_test(t[i]);
-    printf("ROS_DONE failures=%d\n",failures);fflush(stdout);exit(failures?1:0);
+    printf("ROS_DONE failures=%d\n",failures);fflush(stdout);
+#ifdef EUNO_ESP32
+    return failures?1:0;
+#else
+    exit(failures?1:0);
+#endif
 }

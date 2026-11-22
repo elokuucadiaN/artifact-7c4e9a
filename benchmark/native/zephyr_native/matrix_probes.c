@@ -2,10 +2,10 @@
 #include <zephyr/irq_offload.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <time.h>
+#include "probe_clock.h"
 static volatile unsigned active, calls, errors, irq_seen;
 static volatile uint64_t handler_ns, entered;
-static uint64_t stamp(void){struct timespec t;clock_gettime(CLOCK_MONOTONIC,&t);return (uint64_t)t.tv_sec*1000000000ULL+t.tv_nsec;}
+static uint64_t stamp(void){return probe_now();}
 void __real_sys_clock_announce(int32_t ticks);
 void __wrap_sys_clock_announce(int32_t ticks){
  uint64_t start=stamp();unsigned observe=active;

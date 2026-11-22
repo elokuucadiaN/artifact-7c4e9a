@@ -1,4 +1,4 @@
-/* Actual NuttX scheduler and POSIX timer implementation in the 12.2.1 simulator. */
+/* NuttX 12.2.1 scheduler and POSIX timer probes. */
 #include <nuttx/config.h>
 #include <sys/boardctl.h>
 #include <nuttx/sched.h>
@@ -14,26 +14,49 @@
 #include <time.h>
 #include <unistd.h>
 #include <errno.h>
-/* Upstream sim_internal.h host clock: observation only, not a host timer substitute. */
+#ifdef CONFIG_ARCH_CHIP_ESP32
+#define PROBE_PEER_STACK 2048
+#define PROBE_WORKER_STACK 1152
+static uint64_t probe_now(void)
+{
+  uint32_t cycles;
+  __asm__ volatile("rsr.ccount %0" : "=a"(cycles));
+  return (uint64_t)cycles * 1000 / CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ;
+}
+static void stop_probe(int status)
+{
+  if (status != 0) {
+    fflush(stdout);
+    for (;;) sleep(60);
+  }
+}
+#else
+#define PROBE_PEER_STACK 8192
+#define PROBE_WORKER_STACK 4096
 extern uint64_t host_gettime(bool rtc);
-static uint64_t native_now(void){struct timespec t;if(clock_gettime(CLOCK_MONOTONIC,&t))boardctl(BOARDIOC_POWEROFF,8);return (uint64_t)t.tv_sec*1000000000ULL+t.tv_nsec;}
+static uint64_t probe_now(void){return host_gettime(false);}
+static void stop_probe(int status){boardctl(BOARDIOC_POWEROFF,status);}
+#endif
+static uint64_t native_now(void){struct timespec t;if(clock_gettime(CLOCK_MONOTONIC,&t))stop_probe(8);return (uint64_t)t.tv_sec*1000000000ULL+t.tv_nsec;}
 static sem_t done;
 static unsigned progress[100],entries,handoffs,failures;
 static volatile sig_atomic_t fired[100],count,callbacks,errors;
 static int previous;
 static uint64_t first,last;
-static uint64_t boot_start,boot_end;
-static unsigned boot_seen;
 static volatile uint64_t expected[100],body_ns;
 static volatile int64_t max_offset;
 static pthread_t tasks[100];
 static pid_t coordinator_pid;
 static timer_t timers[100];
 static const unsigned wg[]={2,10,20,50,100},tg[]={1,10,20,50,100};
-static void fail(const char *reason) {printf("NOS_FAIL reason=%s errno=%d\n",reason,errno);fflush(stdout);boardctl(BOARDIOC_POWEROFF,2);}
+static void fail(const char *reason) {printf("NOS_FAIL reason=%s errno=%d\n",reason,errno);fflush(stdout);stop_probe(2);}
 static void wait_done(void) {while(sem_wait(&done)<0)if(errno!=EINTR)fail("sem_wait");}
+#ifndef CONFIG_ARCH_CHIP_ESP32
+static uint64_t boot_start;
+static unsigned boot_seen;
 void __real_nx_start(void);
 void __wrap_nx_start(void){boot_start=host_gettime(false);boot_seen=1;__real_nx_start();}
+#endif
 typedef sem_t more_sem_t;
 static unsigned more_bad;
 static pthread_t more_task;
@@ -44,19 +67,19 @@ static void more_wait(more_sem_t *s){while(sem_wait(s)<0)if(errno!=EINTR)fail("m
 static void more_post(more_sem_t *s){if(sem_post(s))fail("more_post");}
 static void more_launch(void){
   pthread_attr_t a;struct sched_param p={130};
-  if(pthread_attr_init(&a) || pthread_attr_setstacksize(&a,8192) || pthread_attr_setinheritsched(&a,PTHREAD_EXPLICIT_SCHED) || pthread_attr_setschedparam(&a,&p) || pthread_create(&more_task,&a,more_entry_task,NULL))fail("more_create");
+  if(pthread_attr_init(&a) || pthread_attr_setstacksize(&a,PROBE_PEER_STACK) || pthread_attr_setinheritsched(&a,PTHREAD_EXPLICIT_SCHED) || pthread_attr_setschedparam(&a,&p) || pthread_create(&more_task,&a,more_entry_task,NULL))fail("more_create");
   pthread_attr_destroy(&a);
 }
 static void more_park(void){}
 static void more_join(void){if(pthread_join(more_task,NULL))fail("more_join");}
 static void more_destroy(more_sem_t *s){if(sem_destroy(s))fail("more_destroy");}
-static uint64_t more_now(void){return host_gettime(false);}
+static uint64_t more_now(void){return probe_now();}
 #define MORE_TAG "NOS"
 #include "euno_more.h"
 static void *worker(void *arg) {
   unsigned id=(unsigned)(uintptr_t)arg;
   for(unsigned r=0;r<100;r++) {
-    uint64_t stamp=host_gettime(false);
+    uint64_t stamp=probe_now();
     if(!entries)first=stamp;
     if(previous>=0 && previous!=(int)id)handoffs++;
     previous=id;entries++;progress[id]++;last=stamp;
@@ -66,7 +89,7 @@ static void *worker(void *arg) {
   return NULL;
 }
 static void callback(int signo,siginfo_t *info,void *ctx) {
-  uint64_t begin=host_gettime(false);
+  uint64_t begin=probe_now();
   uint64_t native_at_entry=native_now();
   (void)ctx;
   unsigned id=(unsigned)info->si_value.sival_int;
@@ -75,20 +98,25 @@ static void callback(int signo,siginfo_t *info,void *ctx) {
   if(callbacks==count && sem_post(&done))fail("callback_sem");
   int64_t offset=(int64_t)native_at_entry-(int64_t)expected[id];
   if(offset>max_offset)max_offset=offset;
-  body_ns+=host_gettime(false)-begin;
+  body_ns+=probe_now()-begin;
 }
 int euno_main(int argc,char **argv) {
-  boot_end=host_gettime(false);
   (void)argc;(void)argv;
+#ifdef CONFIG_ARCH_CHIP_ESP32
+  puts("NOS_META os=NuttX version=12.2.1 port=esp32 hardware_measurement=1");
+  printf("NOS_HW counter_hz=%u tick_us=%u\n", (unsigned)CONFIG_ESP32_DEFAULT_CPU_FREQ_MHZ * 1000000, (unsigned)CONFIG_USEC_PER_TICK);
+#else
+  uint64_t boot_end=probe_now();
   puts("NOS_META os=NuttX version=12.2.1 clock=sim_host_monotonic_ns");
   printf("NOS_MORE_META profile=extended-v2\nNOS_BOOT elapsed_ns=%llu entry=nx_start end=euno_main valid=%u\n",(unsigned long long)(boot_end-boot_start),boot_seen && boot_end>=boot_start);
+#endif
   more_tests();
   coordinator_pid=getpid();
   if(sem_init(&done,0,0))fail("sem_init");
   for(unsigned g=0;g<5;g++) {
     count=wg[g];entries=handoffs=errors=0;previous=-1;memset(progress,0,sizeof(progress));
     pthread_attr_t attr;struct sched_param priority={100};
-    if(pthread_attr_init(&attr) || pthread_attr_setstacksize(&attr,4096) || pthread_attr_setinheritsched(&attr,PTHREAD_EXPLICIT_SCHED) || pthread_attr_setschedparam(&attr,&priority))fail("pthread_attr");
+    if(pthread_attr_init(&attr) || pthread_attr_setstacksize(&attr,PROBE_WORKER_STACK) || pthread_attr_setinheritsched(&attr,PTHREAD_EXPLICIT_SCHED) || pthread_attr_setschedparam(&attr,&priority))fail("pthread_attr");
     for(unsigned i=0;i<count;i++) {
       if(pthread_create(&tasks[i],&attr,worker,(void *)(uintptr_t)i))fail("pthread_create");
     }
@@ -108,14 +136,14 @@ int euno_main(int argc,char **argv) {
       if(timer_create(CLOCK_MONOTONIC,&event,&timers[i]))fail("timer_create");
     }
     struct itimerspec spec={{0,0},{0,20000000}};
-    uint64_t start=host_gettime(false);
+    uint64_t start=probe_now();
     for(unsigned i=0;i<count;i++){expected[i]=native_now()+20000000ULL;if(timer_settime(timers[i],0,&spec,NULL))fail("timer_settime");}
-    uint64_t elapsed=host_gettime(false)-start;
+    uint64_t elapsed=probe_now()-start;
     wait_done();
     for(unsigned i=0;i<count;i++){if(fired[i]!=1)errors++;if(timer_delete(timers[i]))fail("timer_delete");}
     printf("NOS_TIMER timers=%u delay_ms=20 arm_ns=%llu callbacks=%u errors=%u context=signal_handler max_offset_ns=%lld callback_body_ns=%llu deadline_clock=kernel_monotonic\n",count,(unsigned long long)elapsed,callbacks,errors,(long long)max_offset,(unsigned long long)body_ns);
     failures+=errors;
   }
   printf("NOS_DONE failures=%u\n",failures);fflush(stdout);
-  boardctl(BOARDIOC_POWEROFF,failures?1:0);return failures?1:0;
+  stop_probe(failures?1:0);return failures?1:0;
 }
