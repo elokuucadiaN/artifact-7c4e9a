@@ -1,0 +1,17 @@
+mode,window,independent_resets,median_cycles,min_reset_median_cycles,max_reset_median_cycles
+fixed,compare_to_vector,5,17.0,17.0,17.0
+fixed,save,5,75.0,75.0,75.0
+fixed,dispatch,5,120.0,120.0,120.0
+fixed,isr_body,5,35.0,35.0,35.0
+fixed,return_bookkeeping,5,87.0,87.0,87.0
+fixed,restore,5,67.0,67.0,67.0
+fixed,restore_tail_to_resumed,5,33.0,33.0,33.0
+fixed,ccount_store_calibration,5,2.0,2.0,2.0
+tickless,compare_to_vector,5,17.0,17.0,17.0
+tickless,save,5,75.0,75.0,75.0
+tickless,dispatch,5,120.0,120.0,120.0
+tickless,isr_body,5,35.0,35.0,35.0
+tickless,return_bookkeeping,5,87.0,87.0,87.0
+tickless,restore,5,67.0,67.0,67.0
+tickless,restore_tail_to_resumed,5,33.0,33.0,33.0
+tickless,ccount_store_calibration,5,2.0,2.0,2.0

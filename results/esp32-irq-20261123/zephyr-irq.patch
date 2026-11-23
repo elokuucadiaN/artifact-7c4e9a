@@ -1,0 +1,75 @@
+diff --git a/arch/xtensa/core/xtensa_asm2_util.S b/arch/xtensa/core/xtensa_asm2_util.S
+index 11b18013..a345a18b 100644
+--- a/arch/xtensa/core/xtensa_asm2_util.S
++++ b/arch/xtensa/core/xtensa_asm2_util.S
+@@ -149,6 +149,15 @@ _high_restore_done:
+  */
+ .global _restore_context
+ _restore_context:
++
++	rsr a0, CCOUNT
++	movi a2, euno_irq_trace
++	l32i a3, a2, 28
++	bne a3, a1, .Leuno_restore_start_done
++	l32i a3, a2, 16
++	beqz a3, .Leuno_restore_start_done
++	s32i a0, a2, 20
++.Leuno_restore_start_done:
+ 	call0 xtensa_restore_high_regs
+ 
+ 	l32i a0, a1, ___xtensa_irq_bsa_t_pc_OFFSET
+@@ -186,6 +195,15 @@ _restore_context:
+ #endif
+ 	rsync
+ 
++	rsr a0, CCOUNT
++	movi a2, euno_irq_trace
++	l32i a3, a2, 32
++	bne a3, a1, .Leuno_restore_end_done
++	l32i a3, a2, 20
++	beqz a3, .Leuno_restore_end_done
++	s32i a0, a2, 24
++.Leuno_restore_end_done:
++
+ 	l32i a0, a1, ___xtensa_irq_bsa_t_a0_OFFSET
+ 	l32i a2, a1, ___xtensa_irq_bsa_t_a2_OFFSET
+ 	l32i a3, a1, ___xtensa_irq_bsa_t_a3_OFFSET
+diff --git a/arch/xtensa/include/xtensa_asm2_s.h b/arch/xtensa/include/xtensa_asm2_s.h
+index 2f25fcdc..3669e843 100644
+--- a/arch/xtensa/include/xtensa_asm2_s.h
++++ b/arch/xtensa/include/xtensa_asm2_s.h
+@@ -417,6 +417,18 @@ _xstack_returned_\@:
+ 
+ 	call0 xtensa_save_high_regs
+ 
++	rsr a0, CCOUNT
++	movi a2, euno_irq_trace
++	l32i a3, a2, 4
++	beqz a3, .Leuno_save_done_\@
++	l32i a3, a2, 8
++	bnez a3, .Leuno_save_done_\@
++	s32i a0, a2, 8
++	s32i a1, a2, 28
++	l32i a3, a1, 0
++	s32i a3, a2, 32
++.Leuno_save_done_\@:
++
+ 	l32i a2, a1, 0
+ 	l32i a2, a2, ___xtensa_irq_bsa_t_scratch_OFFSET
+ 
+@@ -662,6 +674,15 @@ _not_triple_fault:
+ 	s32i a2, a1, ___xtensa_irq_bsa_t_a2_OFFSET
+ 	s32i a3, a1, ___xtensa_irq_bsa_t_a3_OFFSET
+ 
++.if \LVL == 3
++	rsr a0, CCOUNT
++	movi a2, euno_irq_trace
++	l32i a3, a2, 0
++	beqz a3, .Leuno_vector_done_\@
++	s32i a0, a2, 4
++.Leuno_vector_done_\@:
++.endif
++
+ 	/* Level "1" is the exception handler, which uses a different
+ 	 * calling convention.  No special register holds the
+ 	 * interrupted PS, instead we just assume that the CPU has

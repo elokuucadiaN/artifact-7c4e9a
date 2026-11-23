@@ -1,0 +1,28 @@
+{
+  "zephyr_commit": "36940db938a8f4a1e919496793ed439850a221c2",
+  "hal_espressif_commit": "87e7902d7184a8280b4d13bce79801a723f4ddd8",
+  "toolchain": "xtensa-esp-elf-gcc (crosstool-NG esp-13.2.0_20230928) 13.2.0",
+  "architecture_patch_sha256": "5245ac050bf04f639780dfe5d26f98547a9871ac8b812ca471840f2c7b46bd9d",
+  "configurations": [
+    {
+      "name": "fixed",
+      "tickless": false,
+      "files": {
+        "zephyr.bin": "723fe88f61c6856015b801366bbf6154f2dfa1f1da8313b2857d1c408579b846",
+        "zephyr.elf": "e6f3b902d8f22f7d7cad40bcae5c0b16a890050d4ee7ae4fa1e999efe1b1b6d9",
+        "zephyr.map": "584ff8c33d37c0f6e7e9999724161abb768ead8a6ca5c7624b203ab6cf1b1827",
+        ".config": "454869bd30d52a7bd1a5d81dad590877779f3e1f6c5f555f2fb072641dcbfea4"
+      }
+    },
+    {
+      "name": "tickless",
+      "tickless": true,
+      "files": {
+        "zephyr.bin": "368add84afc6660b637e3134892a0de4879e205a400a95827a3a83740c4230a6",
+        "zephyr.elf": "6d3efae360a3c49543e1ff35ee4f2d3922d9cf2a0a92ce50d75405006ab65c89",
+        "zephyr.map": "581f501fc7edf96cce19494a57d19d1a600ce97809102ba85ab5d814fcd8a667",
+        ".config": "b28a50701d4f2cac23be1a88dbc27a068438041024d6648e670366f3996823fe"
+      }
+    }
+  ]
+}

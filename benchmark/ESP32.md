@@ -50,3 +50,15 @@ python -B -m benchmark.export_esp32_power <run>
 ```
 
 The replay checks raw UART lines, meter frames, sample gaps and the fixed current orientation. It produces separate power/timing and firmware-probe CSVs.
+
+## Hardware IRQ phases
+
+Build the two Zephyr 3.7.0 modes with `python -B -m benchmark.build_zephyr_irq --output <run>` on WSL. This creates a detached Zephyr worktree for the Xtensa assembly instrumentation. The hardware trigger is CCOMPARE1 at CPU IRQ 15, level 3. CCOMPARE0 continues to drive Zephyr's system clock.
+
+Use the respective `fixed/build/zephyr/zephyr.bin` or `tickless/build/zephyr/zephyr.bin` at offset `0x1000`. Preserve the board's original flash.
+
+```powershell
+python -B -m benchmark.capture_esp32_irq --port COM6 --mode fixed --output "<evidence UNC path>\captures\fixed"
+```
+
+Capture `tickless` with its matching image and directory. Replay both modes with `python -B -m benchmark.capture_esp32_irq --output <evidence>`. The [results index](../results/README.md) links to the tested phase boundaries, cycle counts and raw evidence.
