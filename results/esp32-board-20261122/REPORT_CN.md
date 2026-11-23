@@ -52,7 +52,6 @@
 - Zephyr 栈为每个 worker 1280 字节，NuttX 为 1152 字节，FreeRTOS 为 1536 字节。线程、定时器和计时器读取都引入测试应用开销。五次复位的中位数和范围只描述本板、本固件。
 - Contiki-NG 的原 cooperative 配置缺少适用的原生抢占线程路径。当前可用的 AliOS Things 固定版本源码仅覆盖 Rhino Linux 主机子集，缺少可重建原实验的 ESP32 BSP。
 - RIOT 使用微秒 ztimer 观察短区间，毫秒 ztimer 观察请求到期偏差。其回调运行于 IRQ 上下文，计时精度与其他配置不同。
-- 物理复位至首任务就绪、IRQ 架构分段、能耗以及 Mortise/Linux 共置仍待补测。刷写、串口采集和代码重放的证据对应本轮单板原生测试。
 
 ## 后续复核
 
